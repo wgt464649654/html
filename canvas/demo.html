@@ -1,0 +1,26 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas id="MyCanvas" width="100px" height="100px" style="border:1px solid black;"></canvas>
+  </body>
+  <script type="text/javascript">
+    function draw() {
+      const ctx = document.getElementById('MyCanvas').getContext('2d');
+      // 开始画图
+      ctx.beginPath();
+      ctx.strokeStyle = "blue";
+      ctx.moveTo(70, 30);
+      ctx.lineTo(70, 70);
+      ctx.stroke();
+      // 需要重新画一条线，不然会覆盖前面的线
+      ctx.beginPath();
+      ctx.strokeStyle = "red";
+      ctx.moveTo(70, 70);
+      ctx.lineTo(30, 70);
+      ctx.stroke();
+    }
+
+    draw();
+  </script>
+</html>
